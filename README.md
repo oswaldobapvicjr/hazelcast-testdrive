@@ -1,2 +1,18 @@
 # hazelcast-testdrive
-A simple project for test-drive of Hazelcast basic features
+A simple project for test-drive of Hazelcast basic features.
+
+---
+
+## Getting started
+
+Check out the classes in the `net.obvj.gettingstarted` package to get to know the basics of **Hazelcast** and **Hazelcast Client**.
+
+> **Runnable classes:** `GettingStarted` and `GettingStatedClient`.  
+
+## Task Dispatcher and Task Worker
+
+The source code inside the `net.obvj.tasks` implements simple components that dispatch and receive several instances of a dummy task `MyTask` around the cluster, with a dummy, persistent backup of tasks still in the distributed map to be processed. 
+
+> **Runnable classes:** `net.obvj.tasks.TaskDispatcher` and `net.obvj.tasks.TaskWorker`.
+
+Start as many processes of `TaskDispatcher` and `TaskWorker` as you want to test-drive Hazelcast functionalities.
