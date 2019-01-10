@@ -1,5 +1,7 @@
 # hazelcast-testdrive
 
+[![Build Status](https://travis-ci.org/oswaldobapvicjr/hazelcast-testdrive.svg?branch=master)](https://travis-ci.org/oswaldobapvicjr/hazelcast-testdrive)
+
 A simple project for test-drive of Hazelcast basic features.
 
 > **Disclaimer**: This is just a simple project with examples on how Hazelcast can be used to maintain some distributed data structures across a simple cluster. The source code herein is not (yet) production-ready.

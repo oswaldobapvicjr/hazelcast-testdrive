@@ -4,8 +4,6 @@ import java.io.*;
 import java.util.*;
 import java.util.Map.Entry;
 
-import com.sun.xml.internal.messaging.saaj.packaging.mime.util.LineInputStream;
-
 import net.obvj.tasks.MyTask;
 import net.obvj.tasks.api.Task;
 import net.obvj.tasks.storage.TasksQueueStore;
@@ -106,10 +104,10 @@ public final class TasksDBDummy
     private synchronized void loadAllFromFile()
     {
         tasksMap = new TreeMap<>();
-        try (LineInputStream in = new LineInputStream(new FileInputStream(tasksFile)))
+        try (BufferedReader br = new BufferedReader(new FileReader(tasksFile)))
         {
             String line = "";
-            while ((line = in.readLine()) != null)
+            while ((line = br.readLine()) != null)
             {
                 String s[] = line.split(": id=");
                 tasksMap.put(Long.parseLong(s[0].trim()), new MyTask(Long.parseLong(s[1].trim())));
